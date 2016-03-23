@@ -1,0 +1,3 @@
+.equation .form-group, .equation input, .equation button, .equation .output {
+  display: inline-block;
+}

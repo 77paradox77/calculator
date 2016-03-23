@@ -16,57 +16,29 @@ $(document).ready(function() {
     return number1 / number2;
   };
 
-  var bmi = function(weight, height) {
-    return weight * .45 / ((height * .025) ^ 2);
-  };
-
-  $("#add").click( function() {
-    var number1 = parseInt(prompt("Enter a number:"));
-    var number2 = parseInt(prompt("Enter another number:"));
+  $("form#add").submit(function(event) {
+    event.preventDefault();
+    var number1 = parseInt($("#add .num1").val());
+    var number2 = parseInt($("#add .num2").val());
     var result = add(number1, number2);
-    alert(result);
+    $("#add .output").text(result);
   });
 
-  $("#subtract").click( function() {
-    var number1 = parseInt(prompt("Enter a number:"));
-    var number2 = parseInt(prompt("Enter another number:"));
-    var result = subtract(number1, number2);
-    alert(result);
-  });
 
-  $("#multiply").click( function() {
-    var number1 = parseInt(prompt("Enter a number:"));
-    var number2 = parseInt(prompt("Enter another number:"));
-    var result = multiply(number1, number2);
-    alert(result);
-  });
-
-  $("#divide").click( function() {
-    var number1 = parseInt(prompt("Enter a number:"));
-    var number2 = parseInt(prompt("Enter another number:"));
-    var result = divide(number1, number2);
-    alert(result);
-  });
-
-  $("#bmi").click( function() {
-    var number1 = parseInt(prompt("Enter a weight in pounds:"));
-    var number2 = parseInt(prompt("Enter height in inches:"));
-    var result = bmi(number1, number2);
-    alert(result);
-  });
-
-  $("h1").click(function() {
-    alert("This is a header.");
-  });
+/*
   function getRandomColor() {
       var letters = '0123456789ABCDEF'.split('');
+      console.log(letters);
       var color = '#';
       for (var i = 0; i < 6; i++ ) {
           color += letters[Math.floor(Math.random() * 16)];
+          console.log(i + " " + color);
       }
       return color;
   }
+
   $( document ).keypress(function() {
     $("html").css("background-color",getRandomColor());
   });
+  */
 });

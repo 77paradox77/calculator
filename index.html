@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Calculator</title>
   </head>
   <body>
-    <h1>Calculator</h1>
-    <button id="add">add</button>
-    <br>
-    <button id="subtract">subtract</button>
-    <br>
-    <button id="multiply">multiply</button>
-    <br>
-    <button id="divide">divide</button>
-    <br>
-    <button id="bmi">BMI</button>
-    <br>
+    <div class="container">
+      <h1>Calculator</h1>
+
+      <form id="add" class="equation">
+        <div class="form-group">
+          <input class="num1 form-control" type="text">
+          <span> + </span>
+          <input class="num2 form-control" type="text">
+        </div>
+        <button type="submit" class="btn">=</button>
+        <div class="output">
+      </form>
+
+      </div>
+    </div>
+  </body>
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/scripts.js"></script>
