@@ -29,11 +29,10 @@ $(document).ready(function() {
     } else if ($("select").val() === "divide") {
       var result = divide(number1, number2);
     }
-    $(".output").text(result);
+    $(".output").val(result);
   });
 
 
-/*
   function getRandomColor() {
       var letters = '0123456789ABCDEF'.split('');
       console.log(letters);
@@ -46,7 +45,7 @@ $(document).ready(function() {
   }
 
   $( document ).keypress(function() {
-    $("html").css("background-color",getRandomColor());
+    $("input, select").css("border-color",getRandomColor());
+    $("h1").css("color",getRandomColor());
   });
-  */
 });
