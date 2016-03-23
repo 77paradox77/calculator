@@ -16,12 +16,20 @@ $(document).ready(function() {
     return number1 / number2;
   };
 
-  $("form#add").submit(function(event) {
+  $("form.equation").submit(function(event) {
     event.preventDefault();
-    var number1 = parseInt($("#add .num1").val());
-    var number2 = parseInt($("#add .num2").val());
-    var result = add(number1, number2);
-    $("#add .output").text(result);
+    var number1 = parseInt($(".num1").val());
+    var number2 = parseInt($(".num2").val());
+    if ($("select").val() === "add") {
+      var result = add(number1, number2);
+    } else if ($("select").val() === "subtract") {
+      var result = subtract(number1, number2);
+    } else if ($("select").val() === "multiply") {
+      var result = multiply(number1, number2);
+    } else if ($("select").val() === "divide") {
+      var result = divide(number1, number2);
+    }
+    $(".output").text(result);
   });
 
 

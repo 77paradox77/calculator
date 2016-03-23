@@ -8,17 +8,20 @@
     <div class="container">
       <h1>Calculator</h1>
 
-      <form id="add" class="equation">
+      <form class="equation">
         <div class="form-group">
           <input class="num1 form-control" type="text">
-          <span> + </span>
+          <select>
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+          </select>
           <input class="num2 form-control" type="text">
         </div>
         <button type="submit" class="btn">=</button>
-        <div class="output">
+        <div class="output"></div>
       </form>
-
-      </div>
     </div>
   </body>
 
